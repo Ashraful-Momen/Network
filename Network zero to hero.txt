@@ -1,0 +1,61 @@
+# ip : 
+=======
+ip is the logical number of any device that's unique and communicate with internet by connect with your home router.
+suppose my router ip => 192.168.0.1 ,if I'm hit with browser then I can goto my router admin panel . 
+
+
+#switch:
+--------
+in switch connect your home devices and communicate each other . suppose 4 computer connect with a switch . and switch connect with router. 
+switch is work in small network like Lan, Wan . 
+
+Router: 
+----------
+Home network Lan / Wan connect with internet by router . my phone connect with router at inter network and my route connect inter-network 
+to outer-network (whole world). Router have a default getway or ip address => 192.168.0.1 this ip for home network DNS/getway . router also have
+public ip to connect internet directly . Inner network device communicate by router public ip address. my router public ip => 72.14.301.130 
+
+Subnet: (sub-network)
+--------
+Suppose 2 device connect with my router . pc => 192.168.0.2 , mobile =>192.168.4.3 that's connect with router .  Router ip (getway)=>
+192.168.0.1 , subnet indicate the common flag (common number = 255). 192.168 is common for my home network . so , subnet will be 
+255.255.0.0  (common_number_of_ip.common_number_of_ip.uncommon_ip.uncommon_ip). 
+
+if my devices ip => 192.168.0.2, 192.168.0.3 then the subnet will be => 255.255.255.0 (range of ip sub network);
+
+Route 4 core funtionality : 
+----------------------
+1. NAT : NAT stands for Network Address Translation, a technique that allows multiple devices to share a single public IP address.
+         NAT is used by organizations and internet service providers (ISPs) to enable devices on a private network to communicate with devices on a public network.
+
+2. DMZ : In networking, a DMZ, or demilitarized zone, is a subnetwork that protects an organization's internal network from untrusted traffic.
+         It's a perimeter network that acts as a neutral territory between an organization's private network and the internet or other untrusted networks
+
+3. FireWall : set of rules that how to communicate , home network to internet.  LAN devices how to communicate  (internet) WAN network.
+              in WAN (wide area network) connect all other person devices in the internet. Firewall has 2 options 
+              
+              a.DMZ (De maliterize Zone): outer network device (Through internet ) can connect with my device if my device include DMZ listed.conf file. 
+
+              b. Port Forwarding: Every application run different port . http = 80 , ftp= 21. ssh =22 . outer network device can connect with 
+                 ip:port_number in my home network . my_ip:port_80 is the apahce2 server address . can show the file of var/www/http/_number_files. 
+
+List of Ports: 
+----------------
+Port Number
+Usage 20 => File Transfer Protocol (FTP) Data Transfer
+      21 => File Transfer Protocol (FTP) Command Control
+      22 => Secure Shell (SSH)
+      23 => Telnet - Remote login service, unencrypted text messages
+      25 => Simple Mail Transfer Protocol (SMTP) E-mail Routing
+      53 => Domain Name System (DNS) service
+      80 => Hypertext Transfer Protocol (HTTP) used in World Wide Web
+      110=> Post Office Protocol (POP3) used by e-mail clients to retrieve e-mail from a server
+      119=> Network News Transfer Protocol (NNTP)
+      123=> Network Time Protocol (NTP)
+      143=> Internet Message Access Protocol (IMAP) Management of Digital Mail
+      161=> Simple Network Management Protocol (SNMP)
+      194=> Internet Relay Chat (IRC)
+      443=> HTTP Secure (HTTPS) HTTP over TLS/SSL
+
+
+
